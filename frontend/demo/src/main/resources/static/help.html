@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - Certo Mobile Security</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #1E293B;
+            --golden-yellow: #FDBA21;
+            --light-bg: #F8FAFC;
+            --white: #FFFFFF;
+            --text-dark: #0F172A;
+            --text-gray: #64748B;
+            --dark-bg: #0F172A;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--golden-yellow);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #334155 100%);
+            color: var(--white);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 2rem;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 2px solid var(--light-bg);
+        }
+
+        .faq-item h3 {
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .faq-item p {
+            color: var(--text-gray);
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--golden-yellow);
+            color: var(--primary-navy);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(253, 186, 33, 0.3);
+        }
+
+        .features {
+            background: var(--light-bg);
+            padding: 5rem 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        footer {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--golden-yellow);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        .spinner {
+            border: 4px solid var(--light-bg);
+            border-top: 4px solid var(--golden-yellow);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .footer-content,
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Help Center</h1>
+            <p>Find answers to common questions and get support for Certo products</p>
+        </div>
+    </section>
+
+    <!-- FAQs Section (Dynamic) -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div id="faq-container">
+                <div style="text-align: center;">
+                    <div class="spinner"></div>
+                    <p>Loading FAQs...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="features">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Still Need Help?</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: var(--text-gray);">Our support team is here to
+                assist you</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>📧 Email Support</h3>
+                    <p>support@certosoft.com</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Response within 24 hours</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💬 Live Chat</h3>
+                    <p>Available Mon-Fri</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">9 AM - 5 PM EST</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📚 Documentation</h3>
+                    <p>Comprehensive guides</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Step-by-step tutorials</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#" class="btn btn-primary">Contact Support →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load common components -->
+    <script src="/js/common.js"></script>
+
+    <!-- Dynamic Data Loading -->
+    <script>
+        const API_BASE_URL = 'http://localhost:8081/api/v1';
+
+        async function loadFAQs() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/faqs/active`);
+                const faqs = await response.json();
+
+                if (faqs.length > 0) {
+                    document.getElementById('faq-container').innerHTML = faqs.map(faq => `
+                        <div class="faq-item">
+                            <h3>${faq.question}</h3>
+                            <p>${faq.answer}</p>
+                        </div>
+                    `).join('');
+                } else {
+                    document.getElementById('faq-container').innerHTML = '<p style="text-align: center;">No FAQs available at the moment.</p>';
+                }
+            } catch (error) {
+                console.error('Error loading FAQs:', error);
+                document.getElementById('faq-container').innerHTML = '<p style="text-align: center;">Failed to load FAQs</p>';
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadFAQs();
+        });
+    </script>
+</body>
+
+</html>

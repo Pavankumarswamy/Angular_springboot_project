@@ -1,0 +1,68 @@
+<div class="signup-wrapper">
+    <div class="signup-container">
+        <h2>Create Account</h2>
+        <form (ngSubmit)="onSubmit()">
+
+            <div class="form-section">
+                <h4>Account Details</h4>
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" [(ngModel)]="user.username" name="username" placeholder="Choose a username"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" [(ngModel)]="user.email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" [(ngModel)]="user.password" name="password" placeholder="Create a password"
+                        required minlength="4" maxlength="15">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h4>Address</h4>
+                <div class="form-group">
+                    <label>Street</label>
+                    <input type="text" [(ngModel)]="user.address.street" name="street" placeholder="Street Address">
+                </div>
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label>City</label>
+                        <input type="text" [(ngModel)]="user.address.city" name="city" placeholder="City">
+                    </div>
+                    <div class="form-group half-width">
+                        <label>State</label>
+                        <input type="text" [(ngModel)]="user.address.state" name="state" placeholder="State">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label>Zipcode</label>
+                        <input type="text" [(ngModel)]="user.address.zipcode" name="zipcode" placeholder="Zipcode">
+                    </div>
+                    <div class="form-group half-width">
+                        <label>Country</label>
+                        <input type="text" [(ngModel)]="user.address.country" name="country" placeholder="Country">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" [(ngModel)]="user.acceptedTermsAndConditions" name="terms" required>
+                    I accept the terms and conditions
+                </label>
+            </div>
+
+            <button type="submit" [disabled]="!user.acceptedTermsAndConditions">Sign Up</button>
+        </form>
+
+        <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+
+        <div class="footer-links">
+            <p>Already have an account? <a routerLink="/login">Sign In</a></p>
+        </div>
+    </div>
+</div>

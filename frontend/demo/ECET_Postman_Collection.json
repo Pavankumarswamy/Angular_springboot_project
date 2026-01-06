@@ -1,0 +1,567 @@
+{
+  "info": {
+    "name": "ECET Platform API",
+    "description": "Complete API collection for ECET Platform Backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Features",
+      "item": [
+        {
+          "name": "Add Feature 1 - Expert Faculty",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Expert Faculty\",\n  \"description\": \"Learn from experienced faculty members who have years of teaching experience in ECET preparation\",\n  \"iconUrl\": \"https://cdn-icons-png.flaticon.com/512/3135/3135715.png\",\n  \"isActive\": true,\n  \"displayOrder\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/features/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "features", "add"]
+            }
+          }
+        },
+        {
+          "name": "Add Feature 2 - Live Classes",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Live Interactive Classes\",\n  \"description\": \"Attend live online classes with real-time doubt clearing and interactive sessions\",\n  \"iconUrl\": \"https://cdn-icons-png.flaticon.com/512/2991/2991148.png\",\n  \"isActive\": true,\n  \"displayOrder\": 2\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/features/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "features", "add"]
+            }
+          }
+        },
+        {
+          "name": "Add Feature 3 - Mock Tests",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Regular Mock Tests\",\n  \"description\": \"Practice with full-length mock tests designed as per latest ECET exam pattern\",\n  \"iconUrl\": \"https://cdn-icons-png.flaticon.com/512/3281/3281289.png\",\n  \"isActive\": true,\n  \"displayOrder\": 3\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/features/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "features", "add"]
+            }
+          }
+        },
+        {
+          "name": "Add Feature 4 - Study Material",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Comprehensive Study Material\",\n  \"description\": \"Access to well-structured study materials covering all subjects and topics\",\n  \"iconUrl\": \"https://cdn-icons-png.flaticon.com/512/2702/2702154.png\",\n  \"isActive\": true,\n  \"displayOrder\": 4\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/features/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "features", "add"]
+            }
+          }
+        },
+        {
+          "name": "Get All Features",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8081/api/v1/features/all",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "features", "all"]
+            }
+          }
+        },
+        {
+          "name": "Get Active Features",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8081/api/v1/features/active",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "features", "active"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Testimonials",
+      "item": [
+        {
+          "name": "Add Testimonial 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"studentName\": \"Rajesh Kumar\",\n  \"studentImage\": \"https://randomuser.me/api/portraits/men/1.jpg\",\n  \"designation\": \"ECET Rank 12 - 2024\",\n  \"review\": \"The structured approach and expert guidance helped me secure a top rank in ECET. The mock tests were particularly helpful in time management.\",\n  \"rating\": 5,\n  \"isApproved\": true,\n  \"examYear\": \"2024\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/testimonials/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "testimonials", "add"]
+            }
+          }
+        },
+        {
+          "name": "Add Testimonial 2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"studentName\": \"Priya Sharma\",\n  \"studentImage\": \"https://randomuser.me/api/portraits/women/2.jpg\",\n  \"designation\": \"ECET Rank 25 - 2024\",\n  \"review\": \"Excellent platform with comprehensive study material. The faculty is very supportive and always ready to help with doubts.\",\n  \"rating\": 5,\n  \"isApproved\": true,\n  \"examYear\": \"2024\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/testimonials/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "testimonials", "add"]
+            }
+          }
+        },
+        {
+          "name": "Add Testimonial 3",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"studentName\": \"Arun Reddy\",\n  \"studentImage\": \"https://randomuser.me/api/portraits/men/3.jpg\",\n  \"designation\": \"ECET Rank 8 - 2023\",\n  \"review\": \"Best coaching for ECET preparation. The live classes and recorded sessions helped me study at my own pace.\",\n  \"rating\": 5,\n  \"isApproved\": true,\n  \"examYear\": \"2023\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/testimonials/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "testimonials", "add"]
+            }
+          }
+        },
+        {
+          "name": "Get Approved Testimonials",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8081/api/v1/testimonials/approved",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "testimonials", "approved"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pricing Plans",
+      "item": [
+        {
+          "name": "Add Basic Plan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"planName\": \"Basic Plan\",\n  \"price\": 2999.00,\n  \"duration\": \"3 Months\",\n  \"features\": \"Access to recorded lectures,Basic study material,Email support,Limited mock tests\",\n  \"isPopular\": false,\n  \"isActive\": true,\n  \"buttonText\": \"Get Started\",\n  \"buttonLink\": \"/checkout/basic\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/pricing/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "pricing", "add"]
+            }
+          }
+        },
+        {
+          "name": "Add Premium Plan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"planName\": \"Premium Plan\",\n  \"price\": 5999.00,\n  \"duration\": \"6 Months\",\n  \"features\": \"All Basic features,Live interactive classes,Comprehensive study material,Unlimited mock tests,Priority doubt clearing,Performance analytics\",\n  \"isPopular\": true,\n  \"isActive\": true,\n  \"buttonText\": \"Most Popular\",\n  \"buttonLink\": \"/checkout/premium\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/pricing/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "pricing", "add"]
+            }
+          }
+        },
+        {
+          "name": "Add Pro Plan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"planName\": \"Pro Plan\",\n  \"price\": 9999.00,\n  \"duration\": \"12 Months\",\n  \"features\": \"All Premium features,One-on-one mentorship,Personalized study plan,Interview preparation,Career guidance,Lifetime access to materials\",\n  \"isPopular\": false,\n  \"isActive\": true,\n  \"buttonText\": \"Go Pro\",\n  \"buttonLink\": \"/checkout/pro\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/pricing/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "pricing", "add"]
+            }
+          }
+        },
+        {
+          "name": "Get Active Pricing Plans",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8081/api/v1/pricing/active",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "pricing", "active"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "FAQ",
+      "item": [
+        {
+          "name": "Add FAQ 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question\": \"What is ECET?\",\n  \"answer\": \"ECET (Engineering Common Entrance Test) is a state-level entrance examination conducted for diploma holders and B.Sc. degree holders to get admission into second year of engineering programs in various colleges.\",\n  \"category\": \"General\",\n  \"displayOrder\": 1,\n  \"isActive\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/faq/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "faq", "add"]
+            }
+          }
+        },
+        {
+          "name": "Add FAQ 2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question\": \"Who is eligible for ECET?\",\n  \"answer\": \"Candidates who have completed a three-year diploma in Engineering/Technology or B.Sc. degree with Mathematics as one of the subjects are eligible to appear for ECET.\",\n  \"category\": \"Eligibility\",\n  \"displayOrder\": 2,\n  \"isActive\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/faq/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "faq", "add"]
+            }
+          }
+        },
+        {
+          "name": "Add FAQ 3",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question\": \"What is the exam pattern for ECET?\",\n  \"answer\": \"ECET is a computer-based test with multiple choice questions. The exam duration is 2 hours covering subjects like Mathematics, Physics, and Chemistry/relevant engineering subjects based on the stream.\",\n  \"category\": \"Exam Pattern\",\n  \"displayOrder\": 3,\n  \"isActive\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/faq/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "faq", "add"]
+            }
+          }
+        },
+        {
+          "name": "Add FAQ 4",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question\": \"How can I access the study materials?\",\n  \"answer\": \"Once you enroll in any of our plans, you will receive login credentials to access our learning portal where all study materials, video lectures, and mock tests are available 24/7.\",\n  \"category\": \"Platform\",\n  \"displayOrder\": 4,\n  \"isActive\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/faq/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "faq", "add"]
+            }
+          }
+        },
+        {
+          "name": "Get Active FAQs",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8081/api/v1/faq/active",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "faq", "active"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Newsletter",
+      "item": [
+        {
+          "name": "Subscribe to Newsletter",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"student@example.com\",\n  \"source\": \"homepage\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/newsletter/subscribe",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "newsletter", "subscribe"]
+            }
+          }
+        },
+        {
+          "name": "Get Active Subscriptions",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8081/api/v1/newsletter/active",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "newsletter", "active"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Footer",
+      "item": [
+        {
+          "name": "Add Footer - About Us",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sectionTitle\": \"Company\",\n  \"linkText\": \"About Us\",\n  \"linkUrl\": \"/about\",\n  \"displayOrder\": 1,\n  \"category\": \"company\",\n  \"description\": \"Learn more about our mission and vision\",\n  \"isActive\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/footer/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "footer", "add"]
+            }
+          }
+        },
+        {
+          "name": "Add Footer - Contact",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sectionTitle\": \"Company\",\n  \"linkText\": \"Contact Us\",\n  \"linkUrl\": \"/contact\",\n  \"displayOrder\": 2,\n  \"category\": \"company\",\n  \"description\": \"Get in touch with our team\",\n  \"isActive\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/footer/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "footer", "add"]
+            }
+          }
+        },
+        {
+          "name": "Add Footer - Privacy Policy",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sectionTitle\": \"Legal\",\n  \"linkText\": \"Privacy Policy\",\n  \"linkUrl\": \"/privacy\",\n  \"displayOrder\": 1,\n  \"category\": \"legal\",\n  \"description\": \"Read our privacy policy\",\n  \"isActive\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/footer/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "footer", "add"]
+            }
+          }
+        },
+        {
+          "name": "Add Footer - Terms",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sectionTitle\": \"Legal\",\n  \"linkText\": \"Terms & Conditions\",\n  \"linkUrl\": \"/terms\",\n  \"displayOrder\": 2,\n  \"category\": \"legal\",\n  \"description\": \"Terms and conditions\",\n  \"isActive\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/v1/footer/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "footer", "add"]
+            }
+          }
+        },
+        {
+          "name": "Get Active Footer Items",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8081/api/v1/footer/active",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "v1", "footer", "active"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

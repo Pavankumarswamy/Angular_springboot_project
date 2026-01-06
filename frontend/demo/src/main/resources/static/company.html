@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Certo - Our Story & Mission</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #1E293B;
+            --golden-yellow: #FDBA21;
+            --light-bg: #F8FAFC;
+            --white: #FFFFFF;
+            --text-dark: #0F172A;
+            --text-gray: #64748B;
+            --dark-bg: #0F172A;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--golden-yellow);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #334155 100%);
+            color: var(--white);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 2rem;
+        }
+
+        .content-section p {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--golden-yellow);
+        }
+
+        .timeline-item h3 {
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-year {
+            color: var(--golden-yellow);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--golden-yellow);
+            color: var(--primary-navy);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(253, 186, 33, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary-navy);
+            color: var(--primary-navy);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-navy);
+            color: var(--white);
+        }
+
+        .features {
+            background: var(--light-bg);
+            padding: 5rem 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        footer {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--golden-yellow);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 968px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .spinner {
+            border: 4px solid var(--light-bg);
+            border-top: 4px solid var(--golden-yellow);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About Certo</h1>
+            <p>Protecting mobile privacy since 2011</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>At Certo, we believe that everyone deserves the right to privacy and security on their mobile devices.
+                Since 2011, we've been dedicated to developing cutting-edge technology that helps people detect and
+                remove spyware, protecting millions of users worldwide.</p>
+
+            <p>Our team of security experts and developers work tirelessly to stay ahead of emerging threats, ensuring
+                that our users have the best possible protection for their iPhones and Android devices.</p>
+
+            <h2 style="margin-top: 3rem;">Our Story</h2>
+            <div id="timeline-container" class="timeline">
+                <div style="text-align: center;">
+                    <div class="spinner"></div>
+                    <p>Loading timeline...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Our Values</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🔒 Privacy First</h3>
+                    <p>We never collect, store, or share your personal data. All scans are performed locally on your
+                        device.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎯 Transparency</h3>
+                    <p>We're open about how our technology works and what data we access. No hidden agendas.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🚀 Innovation</h3>
+                    <p>Continuously improving our detection algorithms to stay ahead of evolving threats.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🤝 User-Centric</h3>
+                    <p>Every feature we build is designed with our users' needs and feedback in mind.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🛡️ Security</h3>
+                    <p>We follow industry best practices to ensure our own software is secure and trustworthy.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💪 Empowerment</h3>
+                    <p>We believe in empowering users with knowledge and tools to protect themselves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="content-section" style="background: var(--light-bg);">
+        <div class="container">
+            <h2 style="text-align: center;">Join Our Team</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">We're always looking for talented
+                individuals who are passionate about mobile security and privacy. If you want to make a difference in
+                protecting people's digital lives, we'd love to hear from you.</p>
+
+            <div style="text-align: center;">
+                <a href="#" class="btn btn-primary">View Open Positions →</a>
+                <a href="#" class="btn btn-secondary" style="margin-left: 1rem;">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load common components -->
+    <script src="/js/common.js"></script>
+
+    <!-- Dynamic Data Loading -->
+    <script>
+        const API_BASE_URL = 'http://localhost:8081/api/v1';
+
+        // Load Timeline
+        async function loadTimeline() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/content/pages/company/timeline`);
+                const timeline = await response.json();
+
+                if (timeline.length > 0) {
+                    document.getElementById('timeline-container').innerHTML = timeline.map(item => `
+                        <div class="timeline-item">
+                            <div class="timeline-year">${item.year}</div>
+                            <h3>${item.title}</h3>
+                            <p>${item.description}</p>
+                        </div>
+                    `).join('');
+                } else {
+                    document.getElementById('timeline-container').innerHTML = '<p style="text-align: center;">No timeline data available.</p>';
+                }
+            } catch (error) {
+                console.error('Error loading timeline:', error);
+                document.getElementById('timeline-container').innerHTML = '<p style="text-align: center;">Failed to load timeline</p>';
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadTimeline();
+        });
+    </script>
+</body>
+
+</html>
